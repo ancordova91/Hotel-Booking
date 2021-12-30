@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cancunsoftware.hotelbooking">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".userinterfaces.activities.FinalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userinterfaces.activities.ConfirmationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userinterfaces.activities.ActivitiesActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.cancunsoftware.hotelbooking.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".userinterfaces.activities.CheckInActivity"
+            android:label="@string/check_in"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".userinterfaces.activities.ImageFullViewActivity"
+            android:label="@string/images"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".userinterfaces.activities.PersonsListActivity"
+            android:label="@string/people_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".userinterfaces.activities.FormPersonActivity"
+            android:label="@string/register_data"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".userinterfaces.dialog.SearchReservationDialog"
+            android:label="@string/search_reservation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Material.Light.Dialog.Alert"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".userinterfaces.activities.RoomDetailsScrollingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".userinterfaces.activities.MyProfileActivity" />
+        <activity android:name=".userinterfaces.activities.SettingsActivity" />
+        <activity
+            android:name=".main.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

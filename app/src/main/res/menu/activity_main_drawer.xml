@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_hotel"
+            android:icon="@drawable/ic_menu_hotel"
+            android:title="@string/menu_hotel" />
+        <item
+            android:id="@+id/nav_room"
+            android:icon="@drawable/ic_menu_room"
+            android:title="@string/menu_room" />
+        <item
+            android:id="@+id/nav_activities"
+            android:icon="@drawable/ic_menu_activities"
+            android:title="@string/menu_activities" />
+        <item
+            android:id="@+id/nav_services"
+            android:icon="@drawable/ic_menu_services"
+            android:title="@string/menu_services" />
+    </group>
+    <item
+        android:checkableBehavior="single"
+        android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+        </menu>
+    </item>
+    <item
+        android:checkableBehavior="single"
+        android:title="@string/menu_my_profile">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_menu_profile"
+                android:title="@string/information"/>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_settings"
+                android:title="@string/menu_settings" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_exit"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="StateListReachable">
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/btncameraselected" /> <!-- pressed -->
+    <item
+        android:state_focused="true"
+        android:drawable="@drawable/btncameraselected" /> <!-- focused -->
+    <item
+        android:state_hovered="true"
+        android:drawable="@drawable/btncameraselected" /> <!-- hovered -->
+    <item
+        android:drawable="@drawable/btncameraunselected"/> <!-- default -->
+</selector>
